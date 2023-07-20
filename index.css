@@ -48,7 +48,7 @@ body{
     right: 15px;
     width: 100px;
     height: 100px;
-    background-image: url(/images/bg-pattern-quotation.svg); 
+    background-image: url(images\bg-pattern-quotation.svg); 
     border-radius: 0 7px 0 0;
     opacity: 60%;
 }
