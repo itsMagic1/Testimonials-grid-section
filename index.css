@@ -1,0 +1,230 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+   /* Primary */
+
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+
+   /* Neutral */
+
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+
+    font-size: 15px;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+}
+
+.container > *{
+    max-width: 100%;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    place-items: center;
+    min-width: 300px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.header{
+    text-align: center;
+    margin-top: 4rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.header__title-h1{
+    font-size: 2.8rem;
+    color: var(--Very-Dark-Magenta);
+}
+
+.header__description{
+    padding: 0 1rem;
+}
+
+.header__description-text{
+    color: var(--Dark-Grayish-Magenta);
+}
+
+.rate{
+    min-width: 95%;
+    display: grid;
+    gap: 1.2rem;
+    place-items: center;
+}
+
+.rate-element{
+    background-color: var(--Light-Grayish-Magenta);
+    width: 95%;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--Very-Dark-Magenta);
+    border-radius: 10px;
+    font-weight: 700;
+    display: grid;
+    gap: .5rem;
+}
+
+.comments{
+    margin-top: 15px;
+    display: grid;
+    gap: 1.2rem;
+    min-width: 90%;
+    display: grid;
+    gap: 1rem;
+    color: var(--White);
+    padding: 0 20px;
+    place-items: start;
+    margin-bottom: 8rem;
+}
+
+.comments__users{
+    background-color: var(--Very-Dark-Magenta);
+    border-radius: 7px;
+    padding: 2.2rem 2.2rem 1.8rem;
+    display: grid;
+    gap: 1.7rem;
+}
+
+.comments__users-status{
+    color: var(--Soft-Pink);
+}
+
+.comments__users-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    margin-left: 1.5rem;
+}
+
+.comments__users-name{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.user{
+    display: flex;
+}
+
+.user__img{
+    width: 3rem;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.img{
+    width: 100%;
+}
+
+.comments__users{
+    text-align: start;
+}
+
+.comments__users-comment{
+    font-size: 1.05rem;
+}
+
+
+@media screen and (min-width: 1440px){
+    :root{
+        font-size: 1.1rem;
+    }
+    body{
+        background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: top left, bottom right;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        max-height: 100vh;
+        padding: 30px 100px 0;
+        gap: 0;
+        max-width: 1550px;
+    }
+    .comments{
+        margin-top: 8rem;
+        grid-column: span 2 ;
+        width: 100%;
+        display: flex;
+        min-height: 75%;
+        padding: 0px 0 20px;
+        min-height: 90%;
+    }
+    .colton{
+        align-self: baseline;
+    }
+    .irene{
+        align-self: center;
+    }
+    .anne{
+        align-self: flex-end;
+    }
+    .rate{
+        min-height: 90%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .rate-element p{
+        font-size: 1.2rem;
+    }
+    .rate__element-stars{
+        margin-left: 1.1rem;
+    }
+    .rate-element{
+        display: flex;
+        flex-direction: row;
+        padding: .7rem;
+        max-width: 85%;
+        justify-content: start;
+    }
+    .element1{
+        align-self: baseline;
+    }
+    .element2{
+        align-self: center;
+    }
+    .element3{
+        align-self: flex-end;
+    }
+    .header{
+        margin-top: 0;
+        text-align: left;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: baseline;
+    }
+    .header__title{
+        max-width: 70%;
+    }
+    .header__title-h1{
+        font-size: 3.3rem;
+    }
+    .header__description{
+        max-width: 75%;
+        padding: 0;
+    }
+    .header__description-text{
+        font-size: 1.1rem;
+    }
+}
